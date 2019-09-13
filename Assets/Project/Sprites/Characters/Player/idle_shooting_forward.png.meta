@@ -1,0 +1,523 @@
+fileFormatVersion: 2
+guid: c2b314c8368132a43a8ea3b45ff1636b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4810625204832615366
+    second: idle_shooting_forward_0
+  - first:
+      213: 4569457980794541691
+    second: idle_shooting_forward_1
+  - first:
+      213: 6037037907241612179
+    second: idle_shooting_forward_2
+  - first:
+      213: -5681102851002165638
+    second: idle_shooting_forward_3
+  - first:
+      213: -2383922834877512268
+    second: idle_shooting_forward_4
+  - first:
+      213: -8502630083619048712
+    second: idle_shooting_forward_5
+  - first:
+      213: -390683960686033286
+    second: idle_shooting_forward_6
+  - first:
+      213: -1295588645643861245
+    second: idle_shooting_forward_7
+  - first:
+      213: 6149222912100067166
+    second: idle_shooting_forward_8
+  - first:
+      213: 5579369237651961215
+    second: idle_shooting_forward_9
+  - first:
+      213: 7992812015124272737
+    second: idle_shooting_forward_10
+  - first:
+      213: -3394352588485863018
+    second: idle_shooting_forward_11
+  - first:
+      213: 8022347416158027669
+    second: idle_shooting_forward_12
+  - first:
+      213: -2430476517587362011
+    second: idle_shooting_forward_13
+  - first:
+      213: -1613521641198815359
+    second: idle_shooting_forward_14
+  - first:
+      213: -8337637396362685011
+    second: idle_shooting_forward_15
+  - first:
+      213: -6273281423813734076
+    second: idle_shooting_forward_16
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: idle_shooting_forward_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 820
+        width: 434
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e3e575e2654bc74799acdd9485ed261
+      internalID: -4810625204832615366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_shooting_forward_1
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 820
+        width: 434
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57564c8c6b46fe7459005386ac4cb663
+      internalID: 4569457980794541691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_shooting_forward_2
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 820
+        width: 434
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85d198b19f51d534aacc475c21fa3b61
+      internalID: 6037037907241612179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_shooting_forward_3
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 820
+        width: 434
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 844ab34ce796f8c4f948195886f62bfe
+      internalID: -5681102851002165638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_shooting_forward_4
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 820
+        width: 434
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79db12e3fb72e454bb48d1c8ccaeb148
+      internalID: -2383922834877512268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_shooting_forward_5
+      rect:
+        serializedVersion: 2
+        x: 2170
+        y: 820
+        width: 434
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f38ab21d64ac3a47b69cab5e34320ae
+      internalID: -8502630083619048712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_shooting_forward_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 410
+        width: 434
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d318cf072e80e54c94730748b1c080b
+      internalID: -390683960686033286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_shooting_forward_7
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 410
+        width: 434
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aed17797b1f62ba43a4e538ff80a8ccb
+      internalID: -1295588645643861245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_shooting_forward_8
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 410
+        width: 434
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c6157af9810d4642871a9a9c8456b29
+      internalID: 6149222912100067166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_shooting_forward_9
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 410
+        width: 434
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f966ecde9558b041954b26bc4bd6ce6
+      internalID: 5579369237651961215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_shooting_forward_10
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 410
+        width: 434
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e800e2cba968a084886fd81e2e69fe91
+      internalID: 7992812015124272737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_shooting_forward_11
+      rect:
+        serializedVersion: 2
+        x: 2170
+        y: 410
+        width: 434
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae3765138afe279439dd460f9a07a3c7
+      internalID: -3394352588485863018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_shooting_forward_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 434
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8952a363caf6414e8fefe57e344c573
+      internalID: 8022347416158027669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_shooting_forward_13
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 0
+        width: 434
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3de2e006aba9e7e449244d947cedc0a9
+      internalID: -2430476517587362011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_shooting_forward_14
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 0
+        width: 434
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f482451f0b5dd44b8b7c80110a650b3
+      internalID: -1613521641198815359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_shooting_forward_15
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 0
+        width: 434
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1371d42755336384dae8b83f7ac687a3
+      internalID: -8337637396362685011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_shooting_forward_16
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 0
+        width: 434
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ffbca939a43e294396a22aa2670cec2
+      internalID: -6273281423813734076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
