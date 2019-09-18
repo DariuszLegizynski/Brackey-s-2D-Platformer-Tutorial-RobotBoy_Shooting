@@ -88,8 +88,8 @@ ScriptedImporter:
   rigSpriteImportData:
   - name: R_arm
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -4808,8 +4808,8 @@ ScriptedImporter:
     uvTransform: {x: 272, y: -1728}
   - name: R_leg
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -6927,8 +6927,8 @@ ScriptedImporter:
     uvTransform: {x: 971, y: -2026}
   - name: torso
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -7457,8 +7457,8 @@ ScriptedImporter:
     uvTransform: {x: -1535, y: -233}
   - name: L_leg
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2

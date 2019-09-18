@@ -4,6 +4,7 @@ using System.Collections;
 public class Player : MonoBehaviour {
 
     private Rigidbody2D myRigidbody2D;
+    BoxCollider2D boxColliderComponent;
 
     public float moveSpeed;
     public float jumpSpeed;
@@ -11,6 +12,8 @@ public class Player : MonoBehaviour {
     private Animator anim;
 
     private bool grounded;
+    private bool crouch;
+    private bool shoot;
 
     public LayerMask whatIsGround;
     public Transform groundCheck;
@@ -19,6 +22,8 @@ public class Player : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
+        boxColliderComponent = GameObject.Find("Player").GetComponent<BoxCollider2D>();
+
         myRigidbody2D = GetComponentInChildren<Rigidbody2D>();
 
         anim = GetComponentInChildren<Animator>();
@@ -37,10 +42,12 @@ public class Player : MonoBehaviour {
         {
             myRigidbody2D.velocity = new Vector2(-moveSpeed, myRigidbody2D.velocity.y);
         }
+
         else if (Input.GetKey(KeyCode.RightArrow))
         {
             myRigidbody2D.velocity = new Vector2(moveSpeed, myRigidbody2D.velocity.y);
         }
+
         else
         {
             myRigidbody2D.velocity = new Vector2(0f, myRigidbody2D.velocity.y);
@@ -58,7 +65,7 @@ public class Player : MonoBehaviour {
             transform.localScale = new Vector3(1f, 1f, 1f);
         }
 
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             myRigidbody2D.velocity = new Vector2(myRigidbody2D.velocity.x, jumpSpeed);
         }
@@ -66,9 +73,30 @@ public class Player : MonoBehaviour {
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundDistance, whatIsGround);
         anim.SetBool("Jump", !grounded);
 
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.DownArrow))
         {
             
+            anim.SetBool("Crouch", crouch);
+            boxColliderComponent.offset = new Vector2(0f, 0.5f);
+            boxColliderComponent.size = new Vector2(1f, 2f);
+            //boxColliderComponent.enabled = false;
+        }
+
+        else
+        {
+            anim.SetBool("Crouch", !crouch);
+            boxColliderComponent.size = new Vector2 (1f, 3.17f);
+            //boxColliderComponent.enabled = true;
+        }
+
+        if (Input.GetKey(KeyCode.D))
+        {
+            anim.SetBool("Shoot", shoot);
+        }
+
+        else
+        {
+            anim.SetBool("Shoot", !shoot);
         }
     }
 }
