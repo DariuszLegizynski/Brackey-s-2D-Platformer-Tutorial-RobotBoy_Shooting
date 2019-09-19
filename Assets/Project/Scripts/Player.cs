@@ -4,7 +4,8 @@ using System.Collections;
 public class Player : MonoBehaviour {
 
     private Rigidbody2D myRigidbody2D;
-    BoxCollider2D boxColliderComponent;
+    BoxCollider2D boxColliderStand;
+    CapsuleCollider2D capsuleColliderCrouch;
 
     public float moveSpeed;
     public float jumpSpeed;
@@ -22,7 +23,8 @@ public class Player : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        boxColliderComponent = GameObject.Find("Player").GetComponent<BoxCollider2D>();
+        boxColliderStand = GameObject.Find("Player").GetComponent<BoxCollider2D>();
+        capsuleColliderCrouch = GameObject.Find("Player").GetComponent<CapsuleCollider2D>();
 
         myRigidbody2D = GetComponentInChildren<Rigidbody2D>();
 
@@ -75,18 +77,20 @@ public class Player : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            
             anim.SetBool("Crouch", crouch);
-            boxColliderComponent.offset = new Vector2(0f, 0.5f);
-            boxColliderComponent.size = new Vector2(1f, 2f);
-            //boxColliderComponent.enabled = false;
+
+            //boxColliderComponent.offset = new Vector2(0f, 0.5f);
+            //boxColliderComponent.size = new Vector2(1f, 2f);
+            capsuleColliderCrouch.enabled = true;
+            boxColliderStand.enabled = false;
         }
 
         else
         {
             anim.SetBool("Crouch", !crouch);
-            boxColliderComponent.size = new Vector2 (1f, 3.17f);
-            //boxColliderComponent.enabled = true;
+            //boxColliderComponent.size = new Vector2 (1f, 3.17f);
+            boxColliderStand.enabled = true;
+            capsuleColliderCrouch.enabled = false;
         }
 
         if (Input.GetKey(KeyCode.D))
