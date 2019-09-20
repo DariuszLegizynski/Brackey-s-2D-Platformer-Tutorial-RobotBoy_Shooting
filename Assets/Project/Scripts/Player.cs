@@ -15,6 +15,7 @@ public class Player : MonoBehaviour {
     private bool grounded;
     private bool crouch;
     private bool shoot;
+    private bool aim;
 
     public LayerMask whatIsGround;
     public Transform groundCheck;
@@ -36,7 +37,6 @@ public class Player : MonoBehaviour {
     {
         Movement();
     }
-
 
     void Movement()
     {
@@ -94,6 +94,16 @@ public class Player : MonoBehaviour {
         }
 
         if (Input.GetKey(KeyCode.D))
+        {
+            anim.SetBool("Aim", aim);
+        }
+
+        else
+        {
+            anim.SetBool("Aim", !aim);
+        }
+
+        if (Input.GetKeyUp(KeyCode.D))
         {
             anim.SetBool("Shoot", shoot);
         }
