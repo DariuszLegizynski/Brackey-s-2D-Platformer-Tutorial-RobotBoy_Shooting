@@ -30,6 +30,11 @@ public class WeaponController : MonoBehaviour
     void Update()
     {
         GunFire();
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Reload();
+        }
     }
 
     void GunFire()
@@ -38,39 +43,51 @@ public class WeaponController : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.D))
             {
+                Debug.Log("ifReloaded is " + ifReloaded);
                 //Play sound "Gun Aim"
-
-                if (Input.GetKeyUp(KeyCode.D) && ifReloaded == true)
-                {
-                    Shoot();
-                }
-
-                else if((Input.GetKeyUp(KeyCode.D) && ifReloaded == true))
-                {
-                    //PlaySound.EmptyMagazine("Click");
-                    Debug.Log("Reload!");
-                }
-
-                else 
-                {
-                    Debug.LogError("Something wrong with the shooting logic!");
-                }
             }
 
+            else if (Input.GetKeyUp(KeyCode.D) && ifReloaded == true)
+            {
+                Shoot();
+                ifReloaded = false;
+            }
+
+            else if ((Input.GetKeyUp(KeyCode.D) && ifReloaded == false))
+            {
+                //PlaySound.EmptyMagazine("Click");
+                Debug.Log("Reload needed!");
+            }
+
+            /*
             else
             {
                 //Play sound. no more aiming
                 Debug.Log("Not aiming anymore");
             }
+            */
         }
 
         else
         {
-            if (Input.GetKey(KeyCode.D) && Time.time > timeToFire);
+            if (Input.GetKey(KeyCode.D) && Time.time > timeToFire)
             {
                 timeToFire = Time.time + 1 / fireRate;
                 Shoot();
             }
         }
+
+    }
+
+    void Shoot()
+    {
+        Vector2 muzle = new Vector2(muzle.position.x, muzle.position.y);
+        Debug.LogError("PifPaf!");
+    }
+
+    void Reload()
+    {
+        ifReloaded = true;
+        Debug.Log("Reloading");
     }
 }
