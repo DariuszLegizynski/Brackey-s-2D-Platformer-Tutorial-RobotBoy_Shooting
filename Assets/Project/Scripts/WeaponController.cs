@@ -81,7 +81,10 @@ public class WeaponController : MonoBehaviour
 
     void Shoot()
     {
-        Vector2 muzle = new Vector2(muzle.position.x, muzle.position.y);
+        Vector2 muzle = transform.position;
+            //new Vector2(muzle.position.x, muzle.position.y);
+        RaycastHit2D hit = Physics2D.Raycast(muzle, Vector2.right, 100f, notToHit);
+        Debug.DrawLine(muzle, Vector2.right * 100f);
         Debug.LogError("PifPaf!");
     }
 
