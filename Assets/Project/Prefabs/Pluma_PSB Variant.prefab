@@ -241,13 +241,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 445107850}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.16074246, w: 0.98699635}
   m_LocalPosition: {x: 1.6702, y: 1.4153, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2052852356}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -18.5}
 --- !u!1 &566879134
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,6 +443,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2052852356}
   - component: {fileID: 2052852357}
+  - component: {fileID: 1046981693}
   m_Layer: 8
   m_Name: imgbin-american-civil-war-pattern-1853-enfield-rifled-musket-weapon-jkdPw2PqWX2eyWq9XyMQjtQwN
   m_TagString: Untagged
@@ -457,14 +458,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052852355}
-  m_LocalRotation: {x: 0, y: 0, z: 0.46174863, w: 0.8870109}
-  m_LocalPosition: {x: 0, y: -0.21, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.30512336, w: 0.9523128}
+  m_LocalPosition: {x: 0.052, y: -0.268, z: 0}
   m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1}
   m_Children:
   - {fileID: 445107851}
   m_Father: {fileID: 1703778104}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 55}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 35.531002}
 --- !u!212 &2052852357
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -514,6 +515,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &1046981693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052852355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a73b87b780900cf42aa0671cec3c7cea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 0
+  damage: 10
+  notToHit:
+    serializedVersion: 2
+    m_Bits: 260
 --- !u!1 &2099734294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1221,15 +1239,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7413825719550916201}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5626431151292735000 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -6271778820647131023, guid: 05941372f7258d243a8cd53aa614933d,
-    type: 3}
-  m_PrefabInstance: {fileID: 7413825719550916201}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5742719966592652629 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2977176583098393404, guid: 05941372f7258d243a8cd53aa614933d,
+    type: 3}
+  m_PrefabInstance: {fileID: 7413825719550916201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5626431151292735000 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -6271778820647131023, guid: 05941372f7258d243a8cd53aa614933d,
     type: 3}
   m_PrefabInstance: {fileID: 7413825719550916201}
   m_PrefabAsset: {fileID: 0}
