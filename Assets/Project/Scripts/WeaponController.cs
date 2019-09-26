@@ -8,19 +8,19 @@ public class WeaponController : MonoBehaviour
     //for future use
     //public int ammoRate = 0;
     public float damage = 10f;
-    public LayerMask notToHit;
+    public LayerMask whatToHit;
 
     bool ifReloaded = true;
 
     private float timeToFire = 0;
-    Transform muzle;
+    Transform muzzle;
 
     // Start is called before the first frame update
     void Awake()
     {
-        muzle = transform.Find("Muzle");
+        muzzle = transform.Find("Muzle");
         
-        if(muzle == null)
+        if(muzzle == null)
         {
             Debug.LogError("No muzle object found");
         }
@@ -81,12 +81,26 @@ public class WeaponController : MonoBehaviour
 
     void Shoot()
     {
-        Vector2 riflePosition = new Vector2(transform.position.x, transform.position.y);
-        //Vector2 muzle = transform.position;
-        Vector2 muzle = new Vector2(transform.position.x, transform.position.y);
-        RaycastHit2D hit = Physics2D.Raycast(muzle, Vector2.right * 100f, 100f, notToHit);
-        Debug.DrawRay(muzle, Vector2.right * 100f);
+        Vector2 muzzle = new Vector2(transform.position.x, transform.position.y);
+        Vector2 rifle = new Vector2(this.transform.position.x, this.transform.position.y);
+        Vector2 rayDir = rifle + muzzle;
+        //Vector2 muzzle = transform.position;
+        //Vector2 muzzle = new Vector2(transform.position.x, transform.position.y);
+        //muzzle.transform.SetParent(transform.parent);
+        //muzzle.transform.position = transform.position;
+        //Vector2 muzzle = transform.position;
+        RaycastHit2D hit = Physics2D.Raycast(muzzle, rayDir, 100f, whatToHit);
+        Debug.DrawLine(muzzle, rayDir * 100f, Color.cyan);
         Debug.LogError("PifPaf!");
+        Debug.Log("rayDir " + rayDir);
+        Debug.Log("muzzle " + muzzle);
+        Debug.Log("rifle " + rifle);
+        
+
+        if (hit.collider != null)
+        {
+            Debug.DrawRay(muzzle, rayDir * 100f, Color.red);
+        }
     }
 
     void Reload()
