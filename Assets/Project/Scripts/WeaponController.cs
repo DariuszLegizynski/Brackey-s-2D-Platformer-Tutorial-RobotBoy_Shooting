@@ -13,14 +13,17 @@ public class WeaponController : MonoBehaviour
     bool ifReloaded = true;
 
     private float timeToFire = 0;
-    Transform muzzle;
+
+    Transform muzle;
+    //public Transform rifle;
 
     // Start is called before the first frame update
+
     void Awake()
     {
-        muzzle = transform.Find("Muzle");
+        muzle = transform.Find("Muzle");
         
-        if(muzzle == null)
+        if(muzle == null)
         {
             Debug.LogError("No muzle object found");
         }
@@ -81,25 +84,16 @@ public class WeaponController : MonoBehaviour
 
     void Shoot()
     {
-        Vector2 muzzle = new Vector2(transform.position.x, transform.position.y);
-        Vector2 rifle = new Vector2(this.transform.position.x, this.transform.position.y);
-        Vector2 rayDir = rifle + muzzle;
-        //Vector2 muzzle = transform.position;
-        //Vector2 muzzle = new Vector2(transform.position.x, transform.position.y);
-        //muzzle.transform.SetParent(transform.parent);
-        //muzzle.transform.position = transform.position;
-        //Vector2 muzzle = transform.position;
-        RaycastHit2D hit = Physics2D.Raycast(muzzle, rayDir, 100f, whatToHit);
-        Debug.DrawLine(muzzle, rayDir * 100f, Color.cyan);
+        Vector2 muzlePos = new Vector2(muzle.transform.position.x, muzle.transform.position.y);
+
+        RaycastHit2D hit = Physics2D.Raycast(muzlePos, muzle.transform.up, 100f, whatToHit);
+        Debug.DrawRay(muzlePos, muzle.transform.up * 100f, Color.yellow);
         Debug.LogError("PifPaf!");
-        Debug.Log("rayDir " + rayDir);
-        Debug.Log("muzzle " + muzzle);
-        Debug.Log("rifle " + rifle);
-        
 
         if (hit.collider != null)
         {
-            Debug.DrawRay(muzzle, rayDir * 100f, Color.red);
+            Debug.DrawRay(muzlePos, muzle.transform.up * 100f, Color.red);
+            Debug.Log("We hit " + hit.collider.name + " and did " + damage + " damage!");
         }
     }
 
