@@ -9,6 +9,7 @@ public class WeaponController : MonoBehaviour
     //public int ammoRate = 0;
     public float damage = 10f;
     public LayerMask whatToHit;
+    public LineRenderer lineRenderer;
 
     bool ifReloaded = true;
 
@@ -44,7 +45,7 @@ public class WeaponController : MonoBehaviour
     {
         if (fireRate == 0)
         {
-            if (Input.GetKey(KeyCode.D))
+            if (Input.GetKeyDown(KeyCode.D))
             {
                 Debug.Log("ifReloaded is " + ifReloaded);
                 //Play sound "Gun Aim"
@@ -52,7 +53,7 @@ public class WeaponController : MonoBehaviour
 
             else if (Input.GetKeyUp(KeyCode.D) && ifReloaded == true)
             {
-                Shoot();
+                StartCoroutine(Shoot());
                 ifReloaded = false;
             }
 
@@ -76,25 +77,41 @@ public class WeaponController : MonoBehaviour
             if (Input.GetKey(KeyCode.D) && Time.time > timeToFire)
             {
                 timeToFire = Time.time + 1 / fireRate;
-                Shoot();
+                StartCoroutine(Shoot());
             }
         }
 
     }
 
-    void Shoot()
+    IEnumerator Shoot()
     {
         Vector2 muzlePos = new Vector2(muzle.transform.position.x, muzle.transform.position.y);
 
-        RaycastHit2D hit = Physics2D.Raycast(muzlePos, muzle.transform.up, 100f, whatToHit);
-        Debug.DrawRay(muzlePos, muzle.transform.up * 100f, Color.yellow);
+        RaycastHit2D hitInfo = Physics2D.Raycast(muzlePos, muzle.transform.up, 100f, whatToHit);
         Debug.LogError("PifPaf!");
 
-        if (hit.collider != null)
+        if (hitInfo.collider != null)
         {
             Debug.DrawRay(muzlePos, muzle.transform.up * 100f, Color.red);
-            Debug.Log("We hit " + hit.collider.name + " and did " + damage + " damage!");
+            Debug.LogWarning("We hit " + hitInfo.collider.name + " and did " + damage + " damage!");
+
+            lineRenderer.SetPosition(0, muzle.position);
+            lineRenderer.SetPosition(1, hitInfo.point);
         }
+
+        else
+        {
+            Debug.DrawRay(muzlePos, muzle.transform.up * 100f, Color.yellow);
+            lineRenderer.SetPosition(0, muzle.position);
+            lineRenderer.SetPosition(1, muzle.transform.up * 100f);
+        }
+
+        lineRenderer.enabled = true;
+
+        //wait for one frame
+        yield return new WaitForSeconds(0.02f);
+
+        lineRenderer.enabled = false;
     }
 
     void Reload()
