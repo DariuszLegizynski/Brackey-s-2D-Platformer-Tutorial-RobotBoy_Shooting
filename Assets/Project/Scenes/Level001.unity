@@ -3115,7 +3115,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1418325594
 Transform:
   m_ObjectHideFlags: 0
@@ -4498,9 +4498,10 @@ GameObject:
   - component: {fileID: 2117017609}
   - component: {fileID: 2117017611}
   - component: {fileID: 2117017610}
+  - component: {fileID: 2117017612}
   m_Layer: 0
-  m_Name: PraciceTarget
-  m_TagString: Untagged
+  m_Name: PracticeTarget
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4594,6 +4595,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2117017612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117017608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15b6fb23b0e1d9f48bd1bcc4ac5572b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 30
 --- !u!4 &2766762080914132267 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4649597463122867652, guid: 5cd94ddc84768bd44950a190ae764e39,
@@ -4666,10 +4680,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1973149338, guid: 5cd94ddc84768bd44950a190ae764e39, type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
-      value: 0.19998741
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cd94ddc84768bd44950a190ae764e39, type: 3}

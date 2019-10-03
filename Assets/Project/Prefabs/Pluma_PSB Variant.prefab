@@ -483,7 +483,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.2076931
+        value: 0.19998741
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -778,6 +778,12 @@ PrefabInstance:
       propertyPath: lineRenderer
       value: 
       objectReference: {fileID: 1973149338}
+    - target: {fileID: 1723184741007346506, guid: 9b3b1c85c53e4ba46bcf8cd23dafa28c,
+        type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 4034664394970891530, guid: 44f2a493a6ee9f24e92837e2b929b908,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b3b1c85c53e4ba46bcf8cd23dafa28c, type: 3}
 --- !u!4 &2052852356 stripped

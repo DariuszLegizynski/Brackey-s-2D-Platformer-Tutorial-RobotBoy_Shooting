@@ -59,11 +59,13 @@ public class Player : MonoBehaviour {
 
         if (myRigidbody2D.velocity.x < 0)
         {
+            //transform.Rotate(0f, 180f, 0f);
             transform.localScale = new Vector3(-1f, 1f, 1f);
         }
 
         else if (myRigidbody2D.velocity.x > 0)
         {
+            //transform.Rotate(0f, 180f, 0f);
             transform.localScale = new Vector3(1f, 1f, 1f);
         }
 

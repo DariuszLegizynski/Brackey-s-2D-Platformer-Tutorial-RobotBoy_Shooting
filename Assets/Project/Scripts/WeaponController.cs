@@ -16,9 +16,7 @@ public class WeaponController : MonoBehaviour
     private float timeToFire = 0;
 
     Transform muzle;
-    //public Transform rifle;
-
-    // Start is called before the first frame update
+    public GameObject bulletPrefab;
 
     void Awake()
     {
@@ -86,6 +84,8 @@ public class WeaponController : MonoBehaviour
     IEnumerator Shoot()
     {
         Vector2 muzlePos = new Vector2(muzle.transform.position.x, muzle.transform.position.y);
+
+        Instantiate(bulletPrefab, muzle.position, muzle.rotation);
 
         RaycastHit2D hitInfo = Physics2D.Raycast(muzlePos, muzle.transform.up, 100f, whatToHit);
         Debug.LogError("PifPaf!");
