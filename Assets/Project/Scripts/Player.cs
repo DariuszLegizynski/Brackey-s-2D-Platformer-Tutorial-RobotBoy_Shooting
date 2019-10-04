@@ -13,9 +13,9 @@ public class Player : MonoBehaviour {
     private Animator anim;
 
     private bool grounded;
-    private bool crouch;
-    private bool shoot;
-    private bool aim;
+    private bool crouch = false;
+    private bool shoot = false;
+    private bool aim = false;
 
     public LayerMask whatIsGround;
     public Transform groundCheck;

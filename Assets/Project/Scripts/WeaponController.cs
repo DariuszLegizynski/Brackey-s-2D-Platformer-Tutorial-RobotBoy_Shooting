@@ -7,7 +7,7 @@ public class WeaponController : MonoBehaviour
     public float fireRate = 0f;
     //for future use
     //public int ammoRate = 0;
-    public float damage = 10f;
+    public int damage = 10;
     public LayerMask whatToHit;
     public LineRenderer lineRenderer;
 
@@ -15,18 +15,8 @@ public class WeaponController : MonoBehaviour
 
     private float timeToFire = 0;
 
-    Transform muzle;
-    public GameObject bulletPrefab;
-
-    void Awake()
-    {
-        muzle = transform.Find("Muzle");
-        
-        if(muzle == null)
-        {
-            Debug.LogError("No muzle object found");
-        }
-    }
+    public Transform muzle;
+    public GameObject hitEffect;
 
     // Update is called once per frame
     void Update()
@@ -85,15 +75,19 @@ public class WeaponController : MonoBehaviour
     {
         Vector2 muzlePos = new Vector2(muzle.transform.position.x, muzle.transform.position.y);
 
-        Instantiate(bulletPrefab, muzle.position, muzle.rotation);
-
         RaycastHit2D hitInfo = Physics2D.Raycast(muzlePos, muzle.transform.up, 100f, whatToHit);
         Debug.LogError("PifPaf!");
 
-        if (hitInfo.collider != null)
+        if (hitInfo)
         {
-            Debug.DrawRay(muzlePos, muzle.transform.up * 100f, Color.red);
-            Debug.LogWarning("We hit " + hitInfo.collider.name + " and did " + damage + " damage!");
+            EnemyBehaviour enemy = hitInfo.transform.GetComponent<EnemyBehaviour>();
+
+            if(enemy != null)
+            {
+                enemy.TakeDamage(damage);
+            }
+
+            Instantiate(hitEffect, hitInfo.point, Quaternion.identity);
 
             lineRenderer.SetPosition(0, muzle.position);
             lineRenderer.SetPosition(1, hitInfo.point);
