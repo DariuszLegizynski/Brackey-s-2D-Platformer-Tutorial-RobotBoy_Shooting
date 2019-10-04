@@ -17,6 +17,8 @@ public class WeaponController : MonoBehaviour
 
     public Transform muzle;
     public GameObject hitEffect;
+    public Transform muzleFlash;
+    public Transform weaponSmoke;
 
     // Update is called once per frame
     void Update()
@@ -42,6 +44,7 @@ public class WeaponController : MonoBehaviour
             else if (Input.GetKeyUp(KeyCode.D) && ifReloaded == true)
             {
                 StartCoroutine(Shoot());
+                WeaponFXEffects();
                 ifReloaded = false;
             }
 
@@ -112,5 +115,11 @@ public class WeaponController : MonoBehaviour
     {
         ifReloaded = true;
         Debug.Log("Reloading");
+    }
+
+    void WeaponFXEffects()
+    {
+        Instantiate(muzleFlash, muzle.position, muzle.rotation);
+        Instantiate(weaponSmoke, transform.position, transform.rotation);
     }
 }
