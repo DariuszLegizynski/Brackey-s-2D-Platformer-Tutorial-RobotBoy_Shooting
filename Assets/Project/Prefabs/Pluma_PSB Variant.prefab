@@ -789,6 +789,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7054992471080046689, guid: bc5ae85987a2bd14b952fa33979ad02c,
         type: 3}
+    - target: {fileID: 1723184741007346506, guid: 9b3b1c85c53e4ba46bcf8cd23dafa28c,
+        type: 3}
+      propertyPath: muzleFlash
+      value: 
+      objectReference: {fileID: 580311359721038193, guid: ccbf9912169806c47815633ab67691f8,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b3b1c85c53e4ba46bcf8cd23dafa28c, type: 3}
 --- !u!4 &2052852356 stripped
