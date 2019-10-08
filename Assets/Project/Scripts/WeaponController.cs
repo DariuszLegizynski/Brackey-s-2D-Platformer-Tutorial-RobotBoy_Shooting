@@ -119,7 +119,7 @@ public class WeaponController : MonoBehaviour
 
     void WeaponFXEffects()
     {
-        Transform cloneMuzleFlash = (Transform)Instantiate(MuzleFlashPrefab, muzle.position, transform.rotation);
+        Transform cloneMuzleFlash = (Transform)Instantiate(MuzleFlashPrefab, muzle.position, Quaternion.identity);
         cloneMuzleFlash.parent = muzle;
         float size = Random.Range(1.6f, 1.9f);
         cloneMuzleFlash.localScale = new Vector3(size, size / 2, size);
