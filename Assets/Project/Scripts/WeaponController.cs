@@ -17,8 +17,8 @@ public class WeaponController : MonoBehaviour
 
     public Transform muzle;
     public GameObject hitEffect;
-    public Transform muzleFlash;
-    public Transform weaponSmoke;
+    public Transform MuzleFlashPrefab;
+    //public Transform weaponSmoke;
 
     // Update is called once per frame
     void Update()
@@ -119,12 +119,12 @@ public class WeaponController : MonoBehaviour
 
     void WeaponFXEffects()
     {
-        Transform cloneMuzleFlash = (Transform) Instantiate(muzleFlash, muzle.position, muzle.rotation);
+        Transform cloneMuzleFlash = (Transform)Instantiate(MuzleFlashPrefab, muzle.position, transform.rotation);
         cloneMuzleFlash.parent = muzle;
-        float size = Random.Range(0.6f, 0.9f);
-        cloneMuzleFlash.localScale = new Vector3(size, size, size);
+        float size = Random.Range(1.6f, 1.9f);
+        cloneMuzleFlash.localScale = new Vector3(size, size / 2, size);
         Destroy(cloneMuzleFlash.gameObject, 0.02f);
 
-        Instantiate(weaponSmoke, transform.position, transform.rotation);
+        //Instantiate(weaponSmoke, transform.position, transform.rotation);
     }
 }

@@ -761,17 +761,17 @@ PrefabInstance:
     - target: {fileID: 1723184740552255996, guid: 9b3b1c85c53e4ba46bcf8cd23dafa28c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.4429987
+      value: -0.43975407
       objectReference: {fileID: 0}
     - target: {fileID: 1723184740552255996, guid: 9b3b1c85c53e4ba46bcf8cd23dafa28c,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8965222
+      value: 0.89811826
       objectReference: {fileID: 0}
     - target: {fileID: 1723184740552255996, guid: 9b3b1c85c53e4ba46bcf8cd23dafa28c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -52.591003
+      value: -52.176003
       objectReference: {fileID: 0}
     - target: {fileID: 1723184741007346506, guid: 9b3b1c85c53e4ba46bcf8cd23dafa28c,
         type: 3}
@@ -791,7 +791,7 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 1723184741007346506, guid: 9b3b1c85c53e4ba46bcf8cd23dafa28c,
         type: 3}
-      propertyPath: muzleFlash
+      propertyPath: MuzleFlashPrefab
       value: 
       objectReference: {fileID: 580311359721038193, guid: ccbf9912169806c47815633ab67691f8,
         type: 3}
