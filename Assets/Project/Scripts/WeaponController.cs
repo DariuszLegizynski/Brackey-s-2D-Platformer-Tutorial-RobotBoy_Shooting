@@ -120,7 +120,7 @@ public class WeaponController : MonoBehaviour
     void WeaponFXEffects()
     {
         Transform cloneMuzleFlash = (Transform)Instantiate(MuzleFlashPrefab, muzle.position, Quaternion.identity);
-        cloneMuzleFlash.parent = muzle;
+        cloneMuzleFlash.parent = muzle;                 // <- muzzle flash not appearing after this line is in the code. After errase, the flash shows only in the right side
         float size = Random.Range(1.6f, 1.9f);
         cloneMuzleFlash.localScale = new Vector3(size, size / 2, size);
         Destroy(cloneMuzleFlash.gameObject, 0.02f);
