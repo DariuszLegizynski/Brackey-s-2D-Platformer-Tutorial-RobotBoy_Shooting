@@ -126,6 +126,5 @@ public class WeaponController : MonoBehaviour
         Destroy(cloneMuzleFlash.gameObject, 0.02f);
 
         Instantiate(weaponSmokePrefab, transform.position, transform.rotation);
-        weaponSmokePrefab.transform.parent = transform;
     }
 }
