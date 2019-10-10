@@ -19,6 +19,7 @@ public class WeaponController : MonoBehaviour
     public GameObject hitEffect;
     public GameObject muzleFlashPrefab;
     public GameObject weaponSmokePrefab;
+    public GameObject muzzleSmokePrefab;
 
     // Update is called once per frame
     void Update()
@@ -119,12 +120,14 @@ public class WeaponController : MonoBehaviour
 
     void WeaponFXEffects()
     {
-        GameObject cloneMuzleFlash = Instantiate(muzleFlashPrefab, muzle.position, muzle.rotation);
+        GameObject cloneMuzleFlash = Instantiate(muzleFlashPrefab, muzle.position, muzle.transform.eulerAngles.y);
         //cloneMuzleFlash.transform.parent = muzle;                 // <- muzzle flash not appearing after this line is in the code. After erase, the flash shows only in the right direction
         float size = Random.Range(1.6f, 1.9f);
         cloneMuzleFlash.transform.localScale = new Vector3(size, size / 2, size);
         Destroy(cloneMuzleFlash.gameObject, 0.02f);
 
         Instantiate(weaponSmokePrefab, transform.position, transform.rotation);
+
+        Instantiate(muzzleSmokePrefab, muzle.position, muzle.rotation);
     }
 }
