@@ -17,7 +17,7 @@ public class WeaponController : MonoBehaviour
 
     public Transform muzle;
     public GameObject hitEffect;
-    public GameObject muzleFlashPrefab;
+    public Transform muzleFlashPrefab;
     public GameObject weaponSmokePrefab;
     public GameObject muzzleSmokePrefab;
 
@@ -79,7 +79,7 @@ public class WeaponController : MonoBehaviour
     {
         Vector2 muzlePos = new Vector2(muzle.transform.position.x, muzle.transform.position.y);
 
-        RaycastHit2D hitInfo = Physics2D.Raycast(muzlePos, muzle.transform.up, 100f, whatToHit);
+        RaycastHit2D hitInfo = Physics2D.Raycast(muzlePos, muzle.up, 100f, whatToHit);
         Debug.LogError("PifPaf!");
 
         if (hitInfo)
@@ -120,7 +120,11 @@ public class WeaponController : MonoBehaviour
 
     void WeaponFXEffects()
     {
-        GameObject cloneMuzleFlash = Instantiate(muzleFlashPrefab, muzle.position, muzle.transform.eulerAngles.y);
+        Vector2 muzleRot = muzle.rotation.eulerAngles;
+        muzleRot = new Vector2(muzle.rotation.x, muzle.rotation.y + 90);
+        //muzle.rotation *= Quaternion.Euler(0, 90f, 0);
+        //Transform cloneMuzleFlash = (Transform)Instantiate(muzleFlashPrefab, muzle.position, muzle.rotation);    //flash in the rightdirection, and stays there
+        Transform cloneMuzleFlash = (Transform)Instantiate(muzleFlashPrefab, muzle.position, Quaternion.Euler(muzleRot));
         //cloneMuzleFlash.transform.parent = muzle;                 // <- muzzle flash not appearing after this line is in the code. After erase, the flash shows only in the right direction
         float size = Random.Range(1.6f, 1.9f);
         cloneMuzleFlash.transform.localScale = new Vector3(size, size / 2, size);
